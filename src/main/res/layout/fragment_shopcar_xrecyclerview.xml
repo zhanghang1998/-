@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/homefrag_recyclerview_item"
+    android:fitsSystemWindows="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp_4">
+
+    <CheckBox
+        android:id="@+id/shopCar_item_check_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/dp_8" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/shopCar_item_img"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+        android:layout_margin="@dimen/dp_8"
+        android:layout_toRightOf="@+id/shopCar_item_check_single"
+        android:adjustViewBounds="true"
+        android:minHeight="@dimen/dp_50"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/shopCar_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_toRightOf="@+id/shopCar_item_img"
+        android:padding="6dp"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="#666666"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/shopCar_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopCar_item_title"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_toRightOf="@+id/shopCar_item_img"
+        android:padding="@dimen/dp_6"
+        android:text="￥价格"
+        android:textColor="#ff0606" />
+
+    <zyh.util.MyUtilView
+        android:id="@+id/shopCar_item_add_sub_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shopCar_item_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginRight="@dimen/dp_8"
+        android:layout_toRightOf="@+id/shopCar_item_price"
+        android:gravity="right">
+
+    </zyh.util.MyUtilView>
+
+
+</RelativeLayout>

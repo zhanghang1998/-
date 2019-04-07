@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_home_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_24"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/search_goods_imageView"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            app:srcCompat="@mipmap/common_nav_btn_menu_n" />
+
+        <EditText
+            android:id="@+id/searche_goods_ditText"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/sercrh_goods_activity_edit"
+            android:hint="请输入您要搜索的商品"
+            android:paddingLeft="20dp"
+            android:textSize="@dimen/sp_12" />
+
+        <TextView
+            android:id="@+id/search_goods_text"
+            android:padding="6dp"
+            android:textSize="@dimen/dp_14"
+            android:textColor="#666666"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索" />
+
+    </LinearLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:visibility="gone"
+        android:id="@+id/search_goods_xRecyclerView"
+        android:layout_below="@+id/linearLayout_home_head"
+        android:layout_marginRight="@dimen/dp_12"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/searche_goods_meiyou"
+        android:layout_below="@+id/linearLayout_home_head"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@mipmap/meiyoushop"
+            android:layout_marginTop="@dimen/dp_78"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_106" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="抱歉,没有找到商品哦"
+            android:textColor="#666666"
+            android:textSize="@dimen/dp_14" />
+
+    </LinearLayout>
+
+</RelativeLayout>
